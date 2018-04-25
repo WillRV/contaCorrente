@@ -1,0 +1,11 @@
+#menu{
+    background-color: #f6b841;
+    width: 100%;
+    height: 130px;
+}
+
+#imgLogo{
+    position: relative;
+    left: 45%;
+    margin: 0;
+}

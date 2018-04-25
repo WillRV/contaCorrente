@@ -1,0 +1,44 @@
+*{
+    font-family: verdana;
+}
+
+body{
+    margin: 0;
+    background: #ebebeb;
+    height: 8000px;
+}
+
+#saldoAtual{
+    background-color: chartreuse;
+    width: 250px;
+    border-radius: 9px;
+    position: relative;
+    left: 41%;
+    top: -15px;
+    margin: 0;
+    padding-left: 5px;
+}
+
+#operacao{
+    width: 600px;
+}
+
+#formOperacao{
+    margin-top: 15px;
+}
+
+#debOrCred{
+    width: 70px;
+}
+
+#depValor{
+    width: 70px;
+}
+
+#valor{
+    width: 100px;
+}
+
+fieldset{
+    border-radius: 9px;
+}
