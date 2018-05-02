@@ -9,7 +9,7 @@
         $conn = getConexaoBanco();
 
         // prepara o SQL para execucao
-        $stmt = $conn->prepare("SELECT 50.0 as saldo");
+        $stmt = $conn->prepare("SELECT saldo FROM `conta-corrente` WHERE numero = '12345-6'");
         // executa a consulta
         $stmt->execute();
         // configura para acessar os valores de cada coluna pelo nome
