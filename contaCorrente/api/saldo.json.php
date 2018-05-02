@@ -5,17 +5,27 @@
     $saldo = 0;
 
     try {
+        // conecta ao banco
         $conn = getConexaoBanco();
 
-        // $result = $conn->query("SELECT -1 as saldo");
+        // prepara o SQL para execucao
+        $stmt = $conn->prepare("SELECT 50.0 as saldo");
+        // executa a consulta
+        $stmt->execute();
+        // configura para acessar os valores de cada coluna pelo nome
+        $stmt->setFetchMode(PDO::FETCH_ASSOC);
+        // busca todos os resultados do banco
+        $result = $stmt->fetchAll();
 
-        // if ($result->num_rows > 0) {
-        //     $row = $result->fetch_assoc();
-        //     $saldo = $row["saldo"];
-        // }
+        // acessa a primeira linha (indice 0) e le o valor da coluna saldo
+        $saldo = $result[0]["saldo"];
+
     } catch (PDOException $e) {
         $err = $e->getMessage();
+    } finally {
+        // $conn->close();
     }
+
 ?>
 {
     "saldo": <?php echo $saldo; ?>,

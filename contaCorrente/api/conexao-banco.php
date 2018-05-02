@@ -1,4 +1,5 @@
 <?php 
+    // retorna a conexao com o banco de dados
     function getConexaoBanco() {
         $servername = "localhost";
         $username = "username";
@@ -12,6 +13,7 @@
         } catch(PDOException $e) {            
             throw $e;
         }
+        
         return $conn;
     }
  ?>
