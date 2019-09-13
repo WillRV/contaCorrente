@@ -1,6 +1,5 @@
 <?php 
     // retorna a conexao com o banco de dados
-    //testeIgnoraEsseComentario
     function getConexaoBanco() {
         $servername = "localhost";
         $username = "username";
